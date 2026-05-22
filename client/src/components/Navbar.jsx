@@ -32,6 +32,11 @@ export default function Navbar() {
               <Link to="/login" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
                 Connexion
               </Link>
+              {user?.isAdmin && (
+  <Link to="/admin" className="text-sm font-medium text-amber-500 hover:text-amber-600 transition-colors">
+    Admin
+  </Link>
+)}
               <Link to="/register"
                 className="bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors">
                 S'inscrire
